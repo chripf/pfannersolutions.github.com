@@ -1,0 +1,94 @@
+
+<html>
+<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+
+$('document').ready(function(){
+  $('.backgroundText').hide();
+  
+  var index = 0;
+
+  function setPositionThenFadeInOut(element, timeFade, timeDisplay){
+    var top = (Math.random()*80+10) + "%";
+    var left = (Math.random()*80+10) + "%";
+    
+    element.css("top", top);
+    element.css("left", left);    
+
+    console.log(element);
+    element.fadeIn(timeFade);
+
+    var $theElement = element;    
+
+    setTimeout(function(){
+       $theElement.fadeOut(timeFade); 
+       setPositionThenFadeInOut($theElement, timeFade, timeDisplay);
+    }, timeDisplay);
+
+  }
+
+  var timeDelay = 1000;
+
+  $('.backgroundText').each(function(){    
+    
+    var timeDelayCurrent = timeDelay;    
+
+    var $that = $(this);
+
+    setTimeout(function(){
+      setPositionThenFadeInOut($that, 3000, 5000);
+    }, timeDelayCurrent);
+
+    timeDelay = timeDelay + 500;
+
+  });
+    
+
+});
+</script>
+
+<body style="
+text-align: center;
+font-family: 'Special Elite', cursive; 
+margin: 10%;
+font-size:1.5em;">
+<h2>pfanner</h2>
+<h3>solutions - constructions - productions</h3>
+
+<!-- Texts for dynamic background -->
+<div class="backgroundText" style="top: 10%; left: 0%">Strom</div>
+<div class="backgroundText"  style="top: 20%; left: 10%">Code</div>
+<div class="backgroundText"  style="top: 10%; left: 20%">Licht</div>
+<div class="backgroundText"  style="top: 20%; left: 30%">Steuerung</div>
+<div class="backgroundText"  style="top: 10%; left: 40%">Testing</div>
+<div class="backgroundText"  style="top: 20%; left: 50%">Webseite</div>
+<div class="backgroundText"  style="top: 10%; left: 60%">Projektion</div>
+<div class="backgroundText"  style="top: 20%; left: 70%">Sondermaschinen</div>
+<div class="backgroundText"  style="top: 10%; left: 80%">Baumpflege</div>
+<div class="backgroundText"  style="top: 20%; left: 90%">Hochbeet</div>
+<div class="backgroundText" style="top: 30%; left: 0%">Strom</div>
+<div class="backgroundText"  style="top: 40%; left: 10%">Code</div>
+<div class="backgroundText"  style="top: 30%; left: 20%">Licht</div>
+<div class="backgroundText"  style="top: 40%; left: 30%">Steuerung</div>
+<div class="backgroundText"  style="top: 30%; left: 40%">Testing</div>
+<div class="backgroundText"  style="top: 40%; left: 50%">Webseite</div>
+<div class="backgroundText"  style="top: 30%; left: 60%">Projektion</div>
+<div class="backgroundText"  style="top: 40%; left: 70%">Sondermaschinen</div>
+<div class="backgroundText"  style="top: 30%; left: 80%">Baumpflege</div>
+<div class="backgroundText"  style="top: 40%; left: 90%">Hochbeet</div>
+<div class="backgroundText" style="top: 50%; left: 0%">Strom</div>
+<div class="backgroundText"  style="top: 60%; left: 10%">Code</div>
+<div class="backgroundText"  style="top: 50%; left: 20%">Licht</div>
+<div class="backgroundText"  style="top: 60%; left: 30%">Steuerung</div>
+<div class="backgroundText"  style="top: 50%; left: 40%">Testing</div>
+<div class="backgroundText"  style="top: 60%; left: 50%">Webseite</div>
+<div class="backgroundText"  style="top: 50%; left: 60%">Projektion</div>
+<div class="backgroundText"  style="top: 60%; left: 70%">Sondermaschinen</div>
+<div class="backgroundText"  style="top: 50%; left: 80%">Baumpflege</div>
+<div class="backgroundText"  style="top: 60%; left: 90%">Hochbeet</div>
+
+</body>
+</html>

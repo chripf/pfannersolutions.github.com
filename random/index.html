@@ -1,0 +1,86 @@
+
+<html>
+<link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css' />
+<link href='style.css' rel='stylesheet' type='text/css' />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script>
+
+$('document').ready(function(){
+  $('.backgroundText').hide();
+  
+  var index = 0;
+
+  function fadeInOut(element, timeFade, timeDisplay){
+    console.log(element);
+    element.fadeIn(timeFade);
+  }
+
+  var timeDelay = 0;
+
+  $('.backgroundText').each(function(){
+    var top = (Math.random()*80+10) + "%";
+    var left = (Math.random()*80+5) + "%";
+    
+    $(this).css("top", top);
+    $(this).css("left", left);
+    
+    var timeDelayCurrent = timeDelay;    
+
+    var that = $(this);
+
+    setTimeout(function(){
+      //that.fadeIn(3000);
+      fadeInOut(that, 3000, 10000);
+    }, timeDelayCurrent);
+
+    timeDelay = timeDelay + 500;
+
+  });
+    
+
+});
+</script>
+
+<body style="
+text-align: center;
+font-family: 'Special Elite', cursive; 
+margin: 10%;
+font-size:1.5em;">
+<h2>random text background</h2>
+<h3>not so random without javascript, but still working</h3>
+
+<!-- Texts for dynamic background -->
+<div class="backgroundText" style="top: 10%; left: 0%">Electric</div>
+<div class="backgroundText"  style="top: 20%; left: 10%">Code</div>
+<div class="backgroundText"  style="top: 10%; left: 20%">Light</div>
+<div class="backgroundText"  style="top: 20%; left: 30%">Control</div>
+<div class="backgroundText"  style="top: 10%; left: 40%">Testing</div>
+<div class="backgroundText"  style="top: 20%; left: 50%">Websites</div>
+<div class="backgroundText"  style="top: 10%; left: 60%">Projection</div>
+<div class="backgroundText"  style="top: 20%; left: 70%">Special Needs</div>
+<div class="backgroundText"  style="top: 10%; left: 80%">Treehugging</div>
+<div class="backgroundText"  style="top: 20%; left: 90%">Foil hats</div>
+<div class="backgroundText" style="top: 30%; left: 0%">Fun</div>
+<div class="backgroundText"  style="top: 40%; left: 10%">Genius</div>
+<div class="backgroundText"  style="top: 30%; left: 20%">Creative</div>
+<div class="backgroundText"  style="top: 40%; left: 30%">Fast</div>
+<div class="backgroundText"  style="top: 30%; left: 40%">Reliable</div>
+<div class="backgroundText"  style="top: 40%; left: 50%">Fancy</div>
+<div class="backgroundText"  style="top: 30%; left: 60%">Efficient</div>
+<div class="backgroundText"  style="top: 40%; left: 70%">Rocks</div>
+<div class="backgroundText"  style="top: 30%; left: 80%">Dynamic</div>
+<div class="backgroundText"  style="top: 40%; left: 90%">Bells</div>
+<div class="backgroundText" style="top: 50%; left: 0%">Sun</div>
+<div class="backgroundText"  style="top: 60%; left: 10%">Moon</div>
+<div class="backgroundText"  style="top: 50%; left: 20%">Earth</div>
+<div class="backgroundText"  style="top: 60%; left: 30%">Calculations</div>
+<div class="backgroundText"  style="top: 50%; left: 40%">Physics</div>
+<div class="backgroundText"  style="top: 60%; left: 50%">Science</div>
+<div class="backgroundText"  style="top: 50%; left: 60%">Create</div>
+<div class="backgroundText"  style="top: 60%; left: 70%">Save</div>
+<div class="backgroundText"  style="top: 50%; left: 80%">Move</div>
+<div class="backgroundText"  style="top: 60%; left: 90%">Stand</div>
+
+</body>
+</html>
