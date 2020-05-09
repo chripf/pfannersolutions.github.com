@@ -1,0 +1,23 @@
+body {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 10%;
+}
+
+.indie {
+    font-family: 'Indie Flower', cursive;
+}
+
+.vibes {
+    font-family: 'Great Vibes';
+}
+
+.elite {
+    font-family: 'Special Elite', cursive;
+}
+
+@media(max-width: 60em) {
+    body {
+        font-size: 1em;
+    }
+}
