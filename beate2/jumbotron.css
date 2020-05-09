@@ -105,9 +105,8 @@ h1,
 .jumbotronContainer {
   position: absolute;
   z-index: 10;
-  left: 60px;
-  right: 60px;
-  top: 50%;
+  left: 35%;
+  top: 35%;
   padding: 30px 30px 30px 35px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -191,7 +190,7 @@ h1,
   position: relative;
   padding-left: 25px;
   font-family: "Muli", sans-serif;
-  font-size: 14px;
+  font-size: 20px;
   line-height: 20px;
 }
 
@@ -222,9 +221,8 @@ h1,
   margin-top: 3px;
   font-weight: 700;
   font-family: "Ek Mukta", sans-serif;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 60px;
-  text-transform: uppercase;
   color: #fc0;
 }
 
@@ -240,7 +238,8 @@ h1,
 
 .jumbotronBody {
   position: relative;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   font-weight: 200;
   font-family: "Muli", sans-serif;
   font-size: 16px;
